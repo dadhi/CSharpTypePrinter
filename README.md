@@ -29,7 +29,7 @@ The options include:
 
 - `stripNamespace` self explanatory.
 - `printType` function may configure the final result given the input type and the output string.
-- `printGenericTypeArgs` if set to true will output open-generic type as `Blah<T>` instead of `Blah<>`. The default value was selected because my own primary use-case is the type inside the `typeof()` where `typeof(Blah<>)` is the valid and the `typeof(Blah<T>)` is not.
+- `printGenericTypeArgs` if set to true will output open-generic type as `Blah<T>` instead of `Blah<>`. The default value is false because of my own use-case of the type inside the `typeof()` where `typeof(Blah<>)` is the valid code and the `typeof(Blah<T>)` is not.
 
 
 Happy coding! 
