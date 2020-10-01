@@ -6,6 +6,7 @@
     <PropertyGroup Label="Packaging">
         <PackageProjectUrl>https://github.com/dadhi/CSharpTypePrinter</PackageProjectUrl>
         <PackageLicense>https://github.com/dadhi/CSharpTypePrinter/blob/master/LICENSE</PackageLicense>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
         <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
         <RepositoryUrl>https://github.com/dadhi/CSharpTypePrinter</RepositoryUrl>
         <RepositoryType>git</RepositoryType>
