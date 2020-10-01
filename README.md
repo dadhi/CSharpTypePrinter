@@ -1,6 +1,8 @@
 # CSharpTypePrinter
 
-Prints a `System.Type` object as a valid C# code, e.g. prints `typeof(A<X>.B<Y>.C)` as a `"A<X>.B<Y>.C"`
+Targets **.NET Standard 2.0**
+
+Prints a `System.Type` object as a valid C# literal, e.g. prints `typeof(A<X>.B<Y>.C)` as a `"A<X>.B<Y>.C"`
 
 It happens that the code for this is the complex pile of details especially if we talk about nested generics.
 

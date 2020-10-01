@@ -4,8 +4,19 @@ using System.Text;
 
 namespace CSharpTypePrinter
 {
+    /// <summary>
+    /// Contains an extension method for the System.Type to print it as a valid C# code
+    /// </summary>
     public static class TypePrinter
     {
+        /// <summary>
+        /// Prints System.Type object as a valid C# literal
+        /// </summary>
+        /// <param name="type">The type to print</param>
+        /// <param name="stripNamespace">self explanatory</param>
+        /// <param name="printType">function may configure the final result given the input type and the output string</param>
+        /// <param name="printGenericTypeArgs">if set ti true will output open-generic type arguments otherwise outputs them as empty strings to be used in the typeof construct</param>
+        /// <returns>The output C# literal for the type</returns>
         public static string ToCSharpCode(this Type type,
             bool stripNamespace = false, Func<Type, string, string> printType = null, bool printGenericTypeArgs = false)
         {

@@ -1,7 +1,61 @@
 <Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <TargetFramework>netstandard2.0</TargetFramework>
+        <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    </PropertyGroup>
+    <PropertyGroup Label="Packaging">
+        <PackageProjectUrl>https://github.com/dadhi/CSharpTypePrinter</PackageProjectUrl>
+        <PackageLicense>https://github.com/dadhi/CSharpTypePrinter/blob/master/LICENSE</PackageLicense>
+        <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+        <RepositoryUrl>https://github.com/dadhi/CSharpTypePrinter</RepositoryUrl>
+        <RepositoryType>git</RepositoryType>
+        <PublishRepositoryUrl>true</PublishRepositoryUrl>
+        <!-- <PackageIcon></PackageIcon> -->
+        <VersionPrefix>1.0.0</VersionPrefix>
+        <VersionSuffix></VersionSuffix>
+        <Product>CSharpTypePrinter</Product>
+        <PackageId>$(Product)</PackageId>
+        <Title>$(Product)</Title>
+        <Description>
+            <![CDATA[
+          
+          Prints System.Type object as a valid C# literal, e.g. typeof(A<X>.B<Y>.C) as a "A<X>.B<Y>.C"
+          
+          ]]>
+        </Description>
+        <PackageTags>pretty-print;csharp;reflection;code-generation;dotnet;type;to-string;automation;happiness;DryIoc;FastExpressionCompiler;ImTools</PackageTags>
+        <PackageReleaseNotes>
+            <![CDATA[
 
-  <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
-  </PropertyGroup>
+        ## v1.0.0 - First major version
 
+        ]]>
+        </PackageReleaseNotes>
+        <AssemblyName>$(Product)</AssemblyName>
+        <AssemblyTitle>$(Product) $(TargetFramework)</AssemblyTitle>
+        <AssemblyVersion>$(VersionPrefix)</AssemblyVersion>
+    </PropertyGroup>
+    <PropertyGroup Label="Signing">
+        <SignAssembly>true</SignAssembly>
+        <AssemblyOriginatorKeyFile>..\..\CSharpTypePrinter.snk</AssemblyOriginatorKeyFile>
+    </PropertyGroup>
+    <ItemGroup>
+        <None Include="..\..\LICENSE" Pack="true" PackagePath="LICENSE" Visible="false"/>
+        <None Include="..\..\CSharpTypePrinter.snk" Pack="true" PackagePath="CSharpTypePrinter.snk" Visible="false"/>
+    </ItemGroup>
+
+    <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+        <EmbedUntrackedSources>true</EmbedUntrackedSources>
+        <ContinuousIntegrationBuild>true</ContinuousIntegrationBuild>
+        <GenerateDocumentationFile>true</GenerateDocumentationFile>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <PackageOutputPath>..\..\.dist</PackageOutputPath>
+        <DebugType>embedded</DebugType>
+        <DebugSymbols>true</DebugSymbols>
+        <IncludeSymbols>false</IncludeSymbols>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.0.0" PrivateAssets="All"/>
+    </ItemGroup>
 </Project>

@@ -1,0 +1,12 @@
+<Project>
+    <PropertyGroup>
+        <Authors>Maksim Volkau</Authors>
+        <Copyright>Copyright © 2020 Maksim Volkau</Copyright>
+        <NeutralLanguage>en-US</NeutralLanguage>
+        <LangVersion>Latest</LangVersion>
+    </PropertyGroup>
+    <ItemGroup>
+        <None Remove="**\*.orig" />
+        <None Remove="**\*.ncrunchproject" />
+    </ItemGroup>
+</Project>
