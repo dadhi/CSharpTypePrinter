@@ -1,6 +1,6 @@
 # CSharpTypePrinter
 
-[![NuGet Badge](https://buildstats.info/nuget/CSharpTypePrinter)](https://www.nuget.org/packages/CSharpTypePrinter)[![fuget.org package api diff](https://www.fuget.org/packages/CSharpTypePrinter/badge.svg?v=1.0.0)](https://www.fuget.org/packages/CSharpTypePrinter/1.0.0/)
+[![NuGet Badge](https://buildstats.info/nuget/CSharpTypePrinter)](https://www.nuget.org/packages/CSharpTypePrinter)[![fuget.org](https://www.fuget.org/packages/CSharpTypePrinter/badge.svg?v=1.0.0)](https://www.fuget.org/packages/CSharpTypePrinter/1.0.0/)
 
 Targets **.NET Standard 2.0**
 
