@@ -86,7 +86,7 @@ namespace CSharpTypePrinter
 
             var typeArgsConsumedByParentsCount = 0;
             var s = new StringBuilder();
-            if (!stripNamespace) 
+            if (!stripNamespace && !string.IsNullOrEmpty(type.Namespace)) // for the auto-generated classes Namespace may be empty and in general it may be empty
                 s.Append(type.Namespace).Append('.');
 
             if (parentTypes != null) 
